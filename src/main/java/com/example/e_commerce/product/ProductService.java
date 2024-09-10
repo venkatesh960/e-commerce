@@ -64,7 +64,7 @@ public class ProductService {
             }
             return null;
         } else if(productDTO.getPrice()!=null){
-            List<Product> byProductPriceGreaterThan = productRepositry.findByProductPriceLesserThan(productDTO.getPrice());
+            List<Product> byProductPriceGreaterThan = productRepositry.findByProductPriceLessThan(productDTO.getPrice());
             if (byProductPriceGreaterThan!=null) {
                 for (Product product : byProductPriceGreaterThan) {
                     if (product.getStock()>0) {
